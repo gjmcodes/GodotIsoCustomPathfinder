@@ -28,7 +28,7 @@ func _physics_process(delta):
 func _draw():
 	
 	var color = Color(.5,0,.5)
-	var line = 3
+	var line = 6
 	var p = Vector2(30,15) #cell size
 	
 	#drawn cursor cell selector if avaliable

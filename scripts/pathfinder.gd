@@ -1,3 +1,20 @@
+
+	Vector2[] lockedPath;
+	public override void _Ready()
+	{
+
+	}
+
+	public Vector2[] Search(Vector2 playerPosition, Vector2 targetPosition)
+	{
+		return lockedPath;
+	}
+	
+
+
+
+
+
 # ============================== Path Finder ==============================
 extends Node
 
