@@ -109,8 +109,7 @@ namespace Pathfinding
                         }
 
                         // defines cost (cost acumulated + cost to neighbour cell)
-                        var newCost = costSoFar[current.position] + (int)current.position.DistanceTo(neighbour);
-
+                        var newCost = PathfinderCost.CostToNeighbourCell(costSoFar, current.position, neighbour);
 
                         // if pos hasn't been calculated before and cost more effective than before
                         if (!costSoFar.ContainsKey(neighbour) || newCost < costSoFar[neighbour])
@@ -118,7 +117,7 @@ namespace Pathfinding
                             costSoFar.Add(neighbour, newCost);
 
                             //  defines its priority
-                            var priority = newCost + (int)targetPosition.DistanceTo(neighbour);
+                            var priority = PathfinderPriority.CalculatePriority(newCost, targetPosition, neighbour);
 
                             //  put into queue
                             this.pathCellsQueue.AddPathCellCost(neighbour, priority);

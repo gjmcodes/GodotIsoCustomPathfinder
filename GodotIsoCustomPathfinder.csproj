@@ -66,6 +66,9 @@
     <Compile Include="scripts\Pathfinding\PathCellsQueue.cs" />
     <Compile Include="scripts\Pathfinding\Pathfinder.cs" />
     <Compile Include="scripts\Pathfinding\PathfindingGrid.cs" />
+    <Compile Include="scripts\Pathfinding\PathfinderCost.cs" />
+    <Compile Include="scripts\Pathfinding\PathfinderPriority.cs" />
+
 
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
